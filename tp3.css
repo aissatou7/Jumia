@@ -1,48 +1,44 @@
 
-body {
+*{
+    text-decoration: none;
     margin: 0%;
+
+}
+
+body {
     display: flex;
     flex-wrap: wrap;
+    overflow-x: hidden;
 }
 
 /***************** division générale de l'entête ***************/
 /******** image entête ******/
 .divisionEntête {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
-}
-.div_imageEntête {
-    width: 100%;
+    justify-content: center;
     background-color: #ff9a00;
 }
-.imageEntête {
-    width: 90%;
-    height: 55px;
-    margin-left: 5%;
-}
+
 
 /******** menu navigation 1 ******/
+
 .navigation1 {
     width: 100%;
-    height: 30px;
     display: flex;
+    gap: 20%;
+    justify-content:space-evenly;
     background-color: #f5f5f5;
+    
 }
-.vender {
-    font-size: 13px;
-    margin: 0.3% 7%;
-}
-.div2_navigation1 {
-    display: flex;
-    gap: 25px;
-    margin-left: 20%;
-    margin-top:0.3% ;
-    font-family:sans-serif;
-}
+
 a{
-    text-decoration: none;
     color: rgb(65, 63, 63);
 }
+a :hover{
+    color: blue;
+} 
 /********************* menu navigation 2 (header) * *************/
 .section_header {
     width: 100%;
@@ -56,22 +52,24 @@ a{
 /* formulaire recherche */
 .div_form {
     width: 70%;
-    margin: 0.2% 10%;
+    margin-top: 0.2% ;
+    margin-left: 16%;
     /* padding-right: 1px; */
 }
 
 .barre_Recherche {
-    width: 70%;
+    width: 50%;
     padding: 2%;
-    border-radius: 10px;
+    border-radius: 7px;
     font-size: 15px;
 }
 
-.bouton_formulaire_Recherche {
+.bouton_barre_Recherche {
+    width: 23%;
     background-color: #f68b1e;
     padding: 2%;
     margin-top: 2%;
-    border-radius: 10px;
+    border-radius: 7px;
 }
 
 /**** menu de navigation2 ****/
@@ -107,16 +105,15 @@ a{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     background-color: #f5f5f5;
 
 }
 #content_main{
-    width: 85%;
+    width: 83%;
     display: flex;
-    gap: 1%;
     margin-top: 1%;
-    margin-left: 8%;
-   
+    gap: 1%;
 }
 
 /*********** menu main /produits **********/
@@ -128,7 +125,7 @@ a{
     background-color: white;
 }
 .div_matériels, p,a{
-    font-size: 93%;
+    font-size: 98%;
 }
 /************silde main 1 **********/
 
@@ -139,6 +136,7 @@ a{
 }
 /*********** menu contact ******/
 .div_contact1 {
+    /* width: 100%; */
     height: 190px;
     border-radius: 10px;
     background-color: white;
@@ -149,29 +147,36 @@ a{
 
 /************silde main 2 **********/
 .content_div_slider2{
-    /* width: 100%; */
-    margin-left: 8%;
-    margin-right: 7%;
+    width: 83%;
+    
+    display: flex;
+    margin-top: 1%;
+    justify-content:center;
+    align-items: center;
     background-color: white;
 }
 .div_slider{
-    width: 90%;
+    width: 87.5%;
+    height: 130px;
     display: flex;
-    gap: 1%;
-    margin: 1% 6%;
+    gap: 2%;
+    /* overflow-x: scroll; */
+    overflow-x: hidden;
+
+    /* margin: 1% 6%; */
    
 }
 .slider{
-    width: 11.5%;
-    height: 100px;
+    width: 13.3%;
+    
     border-radius: 20px;
 }
 
 /* Next & previous buttons */
 .prev, .next {
     /* cursor: pointer; */
-    position: absolute;
-    top: 90%;
+    /* position: absolute;
+    top: 90%; */
     /* width: auto; */
     padding: 16px;
     /* margin-left: 1%; */
@@ -180,14 +185,14 @@ a{
     /* font-weight: bold; */
     font-size: 18px;
     /* transition: 0.6s ease; */
-    border-radius: 0 25px 25px 0;
+    border-radius: 0 28px 28px 0;
     /* user-select: none; */
   }
   
   /* Position the "next button" to the right */
   .next {
     margin-left: 81.3%;
-    border-radius: 25px 0 0 25px;
+    border-radius: 28px 0 0 28px;
   }
   
   /* On hover, add a black background color with a little bit see-through */
@@ -195,4 +200,60 @@ a{
     background-color: rgba(0,0,0,0.8);
   }
 
- 
+ @media screen and (max-width : 1112px) {
+    /* enlever les textes: "Se connecter" "Aide" et "Panier" */
+    .menu1{
+        display: none;
+    }
+   
+    .barre_Recherche {
+        width: 40%;
+    }
+    .bouton_nav2{
+        margin-left: 0%;
+    }
+    /* slider du bas */
+    .slider{
+       
+        height: 60px;
+    }
+ }
+ @media screen and (max-width : 280px) {
+    /******** image entête ******/
+.divisionEntête {
+    width: 50%;
+}
+    /* enlever les textes: "Se connecter" "Aide" et "Panier" */
+    .vender {
+        gap: 1px;
+        font-size: 11px;
+     }
+    .navigation1 {
+        justify-content:start;
+    }
+    .section_header {
+        height: 40px;
+    }
+    .logo_jumia {
+        height: 40%;
+        margin: 15% 0%;
+    }
+    .div_selec_nav2 {
+        margin-left: 20%;
+        /* width: 50%;
+        display: flex; */
+    }
+    .menu1{
+        display: none;
+    }
+    .div_form {
+        display: none;
+    }
+    
+    /* slider du bas */
+    
+    .slider{
+        
+        height: 60px;
+    }
+ }
