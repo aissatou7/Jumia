@@ -14,34 +14,6 @@ function animation1() {
   setTimeout(animation1, 2000); // Change image every 2 seconds
 }
 
-// setTimeout(() => {
-    
-// }, timeout);
-/**************** silder main *************/
-// animation2();
-
-// function animation2() {
-//   var x = document.getElementsByClassName("slider");
-  // const x = document.querySelectorAll('.slider');
-//   var i;
-//   for (i = 0; i < x.length; i++) {
-//     x[i].style.display = "none";
-//     console.log(x[0])
-//   }
-//   for (i = 0; i < 8; i++) {
-//     x[i].style.display = "block";
-//   }
-   
-// }
-// function pres() {
-//   var x = document.getElementsByClassName("div_slider&");
-//   // x.style.overflow-x= scroll;
-//   for (i = 0; i < x.length; i++) {
-//     x[i].style.display = "none";
-//     if(i>=3) x[i].style.display = "block";
- 
-// }
-// }
 animation2();
 
 function animation2() {
@@ -53,7 +25,6 @@ function animation2() {
   for (i = 0; i < 8; i++) {
     x[i].style.display = "block";
   }
-
 }
 function pres() {
   var x = document.getElementsByClassName("slider");
@@ -67,10 +38,16 @@ function pres() {
 // Bouton Menu responsive
 const boutonMenu = document.querySelector('.boutonM')
 const menu = document.querySelector('.div_matériels')
-
+var choix = 'true'
 boutonMenu.addEventListener('click', ()=>
 {
+  if(choix=='true'){
     menu.style.display = 'block'
+    choix='false'
+  }else if (choix='false') {
+    menu.style.display = 'none'
+    choix='true'
+  }
 }
 )
 /**************** silder responsive *************/
@@ -98,4 +75,33 @@ boutonMenu.addEventListener('click', ()=>
  
 // }
 
+// }
+
+// setTimeout(() => {
+    
+// }, timeout);
+/**************** silder main *************/
+// animation2();
+
+// function animation2() {
+//   var x = document.getElementsByClassName("slider");
+  // const x = document.querySelectorAll('.slider');
+//   var i;
+//   for (i = 0; i < x.length; i++) {
+//     x[i].style.display = "none";
+//     console.log(x[0])
+//   }
+//   for (i = 0; i < 8; i++) {
+//     x[i].style.display = "block";
+//   }
+   
+// }
+// function pres() {
+//   var x = document.getElementsByClassName("div_slider&");
+//   // x.style.overflow-x= scroll;
+//   for (i = 0; i < x.length; i++) {
+//     x[i].style.display = "none";
+//     if(i>=3) x[i].style.display = "block";
+ 
+// }
 // }
